@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PoultryDetect - Disease Classifier</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    nav {
+      background-color: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    nav h2 {
+      color: #00ff99;
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to bottom, #000000, #222222);
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+
+    .hero a.button {
+      padding: 10px 20px;
+      background-color: #00ff99;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px;
+      gap: 20px;
+      background-color: #1a1a1a;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <h2>PoultryDetect</h2>
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="#">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Poultry Health Hub</h1>
+    <p>Your comprehensive resource for poultry disease management and prevention.</p>
+    <a class="button" href="/predict">GET STARTED</a>
+  </section>
+
+  <!-- Image Gallery -->
+  <section class="gallery">
+   <img src="{{ url_for('static', filename='uploads/bird1.jpg') }}" alt="Coccidiosis">
+   <img src="{{ url_for('static', filename='uploads/bird2.jpg') }}" alt="Infected Chicken">
+   <img src="{{ url_for('static', filename='uploads/bird3.jpg') }}" alt="New Castle">
+   <img src="{{ url_for('static', filename='uploads/farm.jpg') }}" alt="Poultry Farm">
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 PoultryDetect. All rights reserved.
+  </footer>
+
+</body>
+</html>
