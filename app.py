@@ -4,6 +4,18 @@ from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import numpy as np
 import os
 
+import os
+import gdown
+
+MODEL_PATH = "poultry_disease_model.h5"
+DRIVE_ID = "https://drive.google.com/file/d/1Il6JzGhJplnPAuqsEC-ykFCAihqTxUfq/view?usp=sharing"  # Replace with your file ID from Google Drive
+
+# Download the model if not present
+if not os.path.exists(MODEL_PATH):
+    url = f"https://drive.google.com/uc?id={DRIVE_ID}"
+    print("Downloading model from Google Drive...")
+    gdown.download(url, MODEL_PATH, quiet=False)
+
 # Initialize Flask app
 app = Flask(__name__)
 
